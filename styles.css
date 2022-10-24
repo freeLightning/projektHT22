@@ -4,7 +4,27 @@
     --cLIght: #ddd;
 
     --font: 100vw;
-    /*  font-size: 34vw  sedan calc*/
+    /*  font-size: 34vw  sedan calc?
+    
+    EX.
+h1{ font-size: 10vw; }
+
+p { font-size: 5vw; }
+
+OBS! vw kan bli för stort på stora skärmar och för litet på små skärmar. Använd då @media.
+
+EX.
+@media (max-width: 500px){
+	h1 {  font-size: 32px;	}
+
+	p {	  font-size: 16px;	}
+}
+
+@media (min-width: 1000px){
+	h1 {  font-size: 36px;	}
+
+	p {	  font-size: 20px;	}
+}*/
 }
 
 body {
@@ -87,14 +107,17 @@ body:nth-child(2) {
         border: 1px solid white;
         color: black;
         font-weight: bold;
+        font-family: "Barlow Semi Condensed";
     }
 
-    /* !!!! få bort hover!!!! */
-    body:nth-of-type(4) div:hover {
+    /* HOVER_NOT */
+    body:nth-child(2) nav div:nth-child(2):hover {
         box-shadow: 0 0 2px 2px rgba(187, 189, 190, 0.84);
         border: 1px solid white;
         color: black;
         font-weight: bold;
+        font-family: "Barlow Semi Condensed";
+        background-color: rgba(255, 255, 255, 0.7);
     }
 
 
@@ -118,7 +141,7 @@ body:nth-child(2) {
 
 /*---------- MEDIA QUERIES TABLET ----------*/
 /* TABLET */
-@media (min-width: 501px) and (max-width:799px){
+@media (min-width: 500px) and (max-width:800px){
     
     /* IMG-BACKGROUND */
     body {
