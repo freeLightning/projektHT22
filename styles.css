@@ -1,0 +1,131 @@
+/* alla mina custum property */
+:root {
+    --cDark: #444;
+    --cLIght: #ddd;
+
+    --font: 100vw;
+    /*  font-size: 34vw  sedan calc*/
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;  
+}
+
+/*  SVART BAKGRUND */
+    body > div  {
+        padding: 1vw;
+    background-color: rgba(68, 68, 68, 0.5);
+    height: 100%;
+    border-radius: 12px;
+display: flex;
+}
+
+h1 {
+    font-family: "Bungee Outline"; 
+}
+
+h2 {
+    font-family: "Barlow Condensed"; 
+}
+header:first-of-type h1{
+    font-family: "Bungee shade";
+    font-size: 4vw;
+}
+
+body:nth-child(2) {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+
+body:nth-child(2) nav div {
+    width: 80%;
+    
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    flex-direction: column;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 4px;    
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    margin: 3px;
+    }
+
+    body:nth-child(2) nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 2px 4px;
+    }
+
+    body:nth-child(2) nav div:hover { 
+        background-color: black;
+        color: white;
+        border-color: black;
+    }
+
+    /* NAVIGATION ACTIVE */
+    body:nth-child(2) nav div:nth-child(2) {
+        box-shadow: 0 0 2px 2px rgba(187, 189, 190, 0.3);
+        border: 1px solid white;
+        color: white;
+    }
+
+
+    /* ALBUM DATA */
+ 
+
+
+/*---------- MEDIA QUERIES DESKTOP ----------*/
+/* DESKTOP */
+@media (min-width: 800px) {
+    /* IMG-BACKGROUND */
+    body {
+        background-image: url("img-desktop/A-deva_cover_desktop_1280x1280.jpg");
+       
+
+    }
+}
+
+
+/*---------- MEDIA QUERIES TABLET ----------*/
+/* TABLET */
+@media (min-width: 501px) and (max-width:799px){
+    
+    /* IMG-BACKGROUND */
+    body {
+        background-image: url("img-tablet/A-deva_cover_tablet_800x800.jpg");
+
+    }
+
+}
+
+
+
+/*---------- MEDIA QUERIES MOBILE ----------*/
+/* MOBILE */
+@media (min-width: 1px) and (max-width: 500px) {
+
+    /* IMG-BACKGROUND */
+    body {
+        background-image: url("img-mobile/deva_cover_mobile_500x500.jpg");
+
+    }
+    body > div > div {
+        height: 100%;
+    }
+
+}
+
+/*---------- MEDIA QUERIES MOBILE ----------*/
