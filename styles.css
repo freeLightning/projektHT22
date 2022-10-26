@@ -22,7 +22,7 @@ body {
     margin: 0;
     height: 100vh; 
     box-sizing: border-box;
-    padding: 80px 30px;
+    padding: 100px 35px;
     color: white;
 
     /* Bakgrundsbild DEVA*/
@@ -48,13 +48,22 @@ body {
         font-size: 4vw;
     }
 
+/*---------- Stjärnbild nr1 ----------*/
+        /* main article:nth-child(2)::before */
+main article:nth-child(2)::before {
+     content: url("media/number-1-icon.png");
+     display: inline-block;
+     width: 15px;
+    height: 15px;
+}
+
 
 /*---------- WRAPPER ----------*/
 /* hela sidan inkl footer (SVART BAKGRUND)*/
 body > div > div {
     padding: 13px;
     background-color: rgba(64, 64, 64, 0.5);
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 /*---------- HEADER ----------*/
@@ -76,7 +85,7 @@ line-height: 1;
     body:nth-child(2) nav {
         width: 100%;
         display: flex;
-
+        margin: 40px 0px;
     }
 
     /* NAVIGATION LINKS */
@@ -141,12 +150,13 @@ main {
 
     main article h1 {
         line-height: 1;
-        margin: 0px;
-        
+        margin: 0px; 
     }
 
-
-
+    main article h2 {
+        line-height: 1;
+        margin: 0px;
+    }
 
 
 
