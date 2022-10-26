@@ -1,0 +1,393 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Barlow condensed";
+    box-sizing: border-box;
+    padding: 80px 40px;
+
+
+    /* BILD - Bakgrundsbild DEVA*/
+    background-image: url("img-original/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
+    background-size: 100vw 65vw;
+    background-position: top right;
+    background-repeat: no-repeat;
+    /*Fixerar bilden på sin position.  */
+    background-attachment: fixed;
+} 
+
+
+/* body {
+    margin: 0;
+    height: 100vh; 
+    box-sizing: border-box;
+    padding: 80px 40px;
+
+    /* Bakgrundsbild DEVA
+    background-image: url("img-original/A-deva_cover_large_5404x5404-beskuren.jpg");
+    background-size: 100vw 75vw;
+    background-position: top right;
+    background-repeat: no-repeat;
+    /*Fixerar bilden på sin position. 
+    background-attachment: fixed;
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+/*---------- MEDIA QUERIES TABLET ----------*/
+
+/*---------- MEDIA QUERIES TABLET ----------*/
+/* TABLET */
+@media (min-width: 500px) and (max-width: 800px) {
+    
+    /* IMG-BACKGROUND */
+    body {
+        background-image: url("img-mobile/deva_cover_mobile_500x500.jpg");
+background-color: teal;
+    }
+}
+
+/*---------- MEDIA QUERIES MOBILE ----------*/
+/* MOBILE */
+@media (max-width: 500px) {
+
+    /* IMG-BACKGROUND */
+    body {
+        background-image: url("img-mobile/deva_cover_mobile_500x500.jpg");
+        background-color: orchid;
+    }
+}
