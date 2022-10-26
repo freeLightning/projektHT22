@@ -48,15 +48,6 @@ body {
         font-size: 4vw;
     }
 
-/*---------- Stjärnbild nr1 ----------*/
-        /* main article:nth-child(2)::before */
-main article:nth-child(2)::before {
-     content: url("media/number-1-icon.png");
-     display: inline-block;
-     width: 15px;
-    height: 15px;
-}
-
 
 /*---------- WRAPPER ----------*/
 /* hela sidan inkl footer (SVART BAKGRUND)*/
@@ -139,13 +130,30 @@ line-height: 1;
 main {
     margin: 50px 0px;
     background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
+    /* number-1-icon */
+    main article:nth-child(1)::after {
+        background-image: url("media/number-1-icon.png");
+        background-size: 30px;
+        display: inline-block;
+
+        /* VISIBLE AREA OF THE ICON(S) */
+        width: 30px; 
+        height: 30px;
+        content:"";
+        position: relative;
+        left: -20px;
+        bottom: -60px;
+      }
+        
     /* ALBUM DATA - ARTICLE */
     main article {
         border: 1px solid white;
         border-radius: 14px;
         padding: 10px;
+        margin-bottom: 20px;
     }
 
     main article h1 {
