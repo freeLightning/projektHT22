@@ -165,13 +165,15 @@
         margin-bottom: 20px;
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 300px);
+        grid-template-columns: 2.5fr repeat(2, 1fr);
+        grid-template-rows: repeat(5, 600px);
     }
 
     /*  */
     /* ALBUM DATA TITEL AND RELEASE DATE */
     main article > div:first-child > div:first-child {
+        grid-column: 1;
+        grid-row: 1;
         color:orange;
     }
 
@@ -195,52 +197,128 @@
     /* MUSICIANS */
     main article > div:first-child > div:nth-child(2) { 
         list-style: none;
+        grid-column: 1;
+        grid-row: 2;
         color: red;
     }
 
      /* ALBUM DESCRIPTION */
      main article > div:first-child > div:nth-child(3) {   
         list-style: none;
+        grid-column: 1;
+        grid-row: 3;
         color: green;
     }
+
 
 /* RIGHT SIDE CONTENT */
 
     /* ALBUM COVER*/
     main article > div:nth-child(2) {
         position: relative;
-        border: 2px solid aqua;
+        height: 500px;
+        /* border: 2px solid aqua; */
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 3;
     }
 
-    /* ALBUM COVER - HOVER*/
-    main article > div:nth-child(2) > img:first-of-type:hover {
-        border: 2px solid yellow;
-        transition-property: opacity 0;
-        transition-duration: 2s; 
-        position:absolute;
-    }
-
-    /* ALBUM COVER - HOVER DISABLED*/
-    main article > div:nth-child(2) > img:last-of-type {
-        border: 2px solid purple;
-        position:absolute;
+    /* ALBUM FRONTCOVER */
+    main article > div:nth-child(2) > img:first-of-type {
+        position: absolute;
         opacity: 1;
+        z-index: 1;
+        border: 2px solid yellow;
+    } 
+
+
+    /* ALBUM FRONTCOVER - HOVER */
+    main article > div:nth-child(2) > img:first-of-type:hover  {
+        transition-property: opacity;
+        transition-duration: 2s;
+        opacity: 0;
+
+        border: 2px solid purple;
     }
+    
+    /* ALBUM BACKCOVER */
+    main article > div:nth-child(2) > img:last-of-type  {
+        position: absolute;
+        left: 0;            
+    }
+    
+    
+
+    
+
+    
+
+
+   
 
     /* SONGLIST ONE */
     main article > div:nth-child(3) > div:first-child {
+        grid-column: 2;
+        grid-row: 4;
         color: blue
     }
 
     /* SONGLIST TWO */
     main article > div:nth-child(3) > div:last-child {
+        grid-column: 3;
+        grid-row: 4;
         color: pink;
     }
 
     /* ANECDOTES */
-    main article > ul {
-      
+    /* GRID CONTAINER */
+    main article > ul:nth-child(4) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
     }
+
+    /* NUMBER ONE */
+    main article > ul:nth-child(4) > li:nth-child(1) {
+        order: 1;
+        background-color: blue;
+    }
+
+    /* NUMBER TWO */
+    main article > ul:nth-child(4) > li:nth-child(2) {
+        order: 2;
+        border: 1px solid yellow;
+    }
+
+    /* NUMBER THREE */
+    main article > ul:nth-child(4) > li:nth-child(3) {
+        order: 3;
+        background-color: green;
+    }
+
+     /* NUMBER FOUR */
+     main article > ul:nth-child(4) > li:nth-child(4) {
+        order: 4;
+        border:1px solid purple;
+    }
+
+     /* NUMBER FIVE */
+     main article > ul:nth-child(4) > li:nth-child(5) {
+        order: 5;
+        border: 1px solid red;
+    }
+
+     /* NUMBER SIX */
+     main article > ul:nth-child(4) > li:nth-child(6) {
+        order: 6;
+        background-color: aqua;
+    }
+
+     /* NUMBER SEVEN */
+     main article > ul:nth-child(4) > li:nth-child(7) {
+        order: 7;
+        background-color: orange;
+    }
+
 
 
 /*---------- MEDIA QUERIES DESKTOP ----------*/
