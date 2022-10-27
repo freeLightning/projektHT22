@@ -32,6 +32,42 @@ body {
 }  */
 
 
+/* BILDER ALBUM - FUNGERAR! */
+
+/* ALBUM COVER*/
+main article > div:nth-child(2) {
+    background-color: rgb(94, 7, 7);
+    position: relative;
+    height: 475px;
+    width: 475px;
+    /* border: 2px solid aqua; */
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 3;
+}
+
+/* ALBUM FRONTCOVER */
+main article > div:nth-child(2) > img:first-of-type {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    border: 2px solid yellow;
+} 
+
+
+/* ALBUM FRONTCOVER - HOVER */
+main article > div:nth-child(2) > img:first-of-type:hover  {
+    transition-property: opacity;
+    transition-duration: 2s;
+    opacity: 0;
+
+    border: 2px solid purple;
+}
+
+/* ALBUM BACKCOVER */
+main article > div:nth-child(2) > img:last-of-type  {
+    position: absolute;
+    left: 0;            
+}
 
 
 
