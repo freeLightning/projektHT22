@@ -18,22 +18,14 @@
     }        
 }*/
 
-body {
-    margin: 0;
-    height: 100vh; 
-    box-sizing: border-box;
-    padding: 100px 35px;
-    color: white;
+/*---------- BODY ----------*/
 
-    /* Bakgrundsbild DEVA*/
-    background-image: url("img-original/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
-    /* background-image: url("img-original/A-deva_cover_large_5404x5404-beskuren.jpg"); */
-    background-size: 100vw 75vw;
-    background-position: top right;
-    background-repeat: no-repeat;
-    /*Fixerar bilden på sin position.  */
-    background-attachment: fixed;
-} 
+    body {
+        margin: 0;
+        height: 100vh; 
+        box-sizing: border-box;
+        color: white;
+    } 
 
 /*---------- FONTS ----------*/
 
@@ -48,27 +40,38 @@ body {
         font-size: 4vw;
     }
 
-
 /*---------- WRAPPER ----------*/
-/* hela sidan inkl footer (SVART BAKGRUND)*/
-body > div > div {
-    padding: 13px;
-    background-color: rgba(64, 64, 64, 0.5);
-    border-radius: 16px;
-}
+
+    /* WRAPPER WITH BACKGROUND IMAGE*/
+    body > div {
+        padding: 100px 35px;
+        
+        /* IMAGE */
+        background-image: url("images/img-desktop/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
+        background-size: 100vw 75vw;
+        background-position: top right;
+        background-repeat: no-repeat;
+        /*Fixerar bilden på sin position.  */
+        background-attachment: fixed;
+    }
+
+    /* CONTENT-WRAPPER - BLACK TRANSPARENT BACKGROUND*/
+    body > div > div {
+        padding: 13px;
+        background-color: rgba(64, 64, 64, 0.5);
+        border-radius: 16px;
+    }
+
 
 /*---------- HEADER ----------*/
-header h1 {
-    height: 150px;
-    font-size: 7.5vw;
-    /* margin-top: -37px; */
-   /*  margin-left: 5px;
-    height: 69px;
-margin-top: -37px;
-margin-left: 5px;*/
-margin: 0; 
-line-height: 1;
-}
+    
+    /* HEADING */
+    header h1 {
+        height: 150px;
+        font-size: 7.5vw;
+        margin: 0; 
+        line-height: 1;
+    }
 
 /*---------- NAVIGATION ----------*/
 
@@ -127,14 +130,15 @@ line-height: 1;
 
 /*---------- MAIN ----------*/
 
-main {
-    margin: 50px 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-}
+    /* TRANSPARENT BACKGROUND */
+    main {
+        margin: 50px 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+    }
 
     /* number-1-icon */
-    main article:nth-child(1)::after {
+    main article:nth-child(2)::before {
         background-image: url("media/number-1-icon.png");
         background-size: 30px;
         display: inline-block;
@@ -145,27 +149,98 @@ main {
         content:"";
         position: relative;
         left: -20px;
-        bottom: -60px;
+        bottom: -20px;
       }
-        
-    /* ALBUM DATA - ARTICLE */
+
+
+/*---------- ARTICLE ----------*/
+
+/* LEFT SIDE CONTENT */
+
+    /* ALBUM DATA */
     main article {
         border: 1px solid white;
         border-radius: 14px;
         padding: 10px;
         margin-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 300px);
     }
 
+    /*  */
+    /* ALBUM DATA TITEL AND RELEASE DATE */
+    main article > div:first-child > div:first-child {
+        color:orange;
+    }
+
+    /* ALBUM NAME */
     main article h1 {
         line-height: 1;
         margin: 0px; 
     }
 
+    /* DATE OF RELEASE */
     main article h2 {
         line-height: 1;
         margin: 0px;
     }
 
+    /* LIST ATTRIBUT */
+    main article ul {
+        list-style: none;
+    }
+
+    /* MUSICIANS */
+    main article > div:first-child > div:nth-child(2) { 
+        list-style: none;
+        color: red;
+    }
+
+     /* ALBUM DESCRIPTION */
+     main article > div:first-child > div:nth-child(3) {   
+        list-style: none;
+        color: green;
+    }
+
+/* RIGHT SIDE CONTENT */
+
+    /* ALBUM COVER*/
+    main article > div:nth-child(2) {
+        position: relative;
+        border: 2px solid aqua;
+    }
+
+    /* ALBUM COVER - HOVER*/
+    main article > div:nth-child(2) > img:first-of-type:hover {
+        border: 2px solid yellow;
+        transition-property: opacity 0;
+        transition-duration: 2s; 
+        position:absolute;
+    }
+
+    /* ALBUM COVER - HOVER DISABLED*/
+    main article > div:nth-child(2) > img:last-of-type {
+        border: 2px solid purple;
+        position:absolute;
+        opacity: 1;
+    }
+
+    /* SONGLIST ONE */
+    main article > div:nth-child(3) > div:first-child {
+        color: blue
+    }
+
+    /* SONGLIST TWO */
+    main article > div:nth-child(3) > div:last-child {
+        color: pink;
+    }
+
+    /* ANECDOTES */
+    main article > ul {
+      
+    }
 
 
 /*---------- MEDIA QUERIES DESKTOP ----------*/
