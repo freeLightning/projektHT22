@@ -53,7 +53,6 @@
     body {
         font-family: "Barlow Condensed"; 
         font-size: 1.6vw;
-        margin: 5px;
     }
    
 
@@ -178,7 +177,7 @@
     }
 
     /* ALBUM NAME */
-    main article:nth-child(1)h1 {
+    main article:nth-child(1) > div:first-child > div:first-child > h1 {
         line-height: 1;
     }
 
@@ -189,13 +188,20 @@
 
     /* MUSICIANS */
     main article:nth-child(1)> div:first-child > div:nth-child(2) {
-        margin: 2vh 0vh;
-        
+        margin: 2vh 0;
         color: white;      
     }
 
+    main article:nth-child(1)> div:first-child > div:nth-child(2) p {
+        margin: 0;   
+    }
+
+    main article:nth-child(1)> div:first-child > div:nth-child(2) ul {
+        margin: 0;   
+    }
+
     main article:nth-child(1)> div:first-child > div:nth-child(2) li { 
-        margin-left: 20px;
+        margin-top: 0;
         list-style: none;
     }
 
@@ -220,13 +226,10 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        
         opacity: 1;
         z-index: 1;
         border-top-left-radius: var(--borderRadius);
         border-top-right-radius: var(--borderRadius);
-
-        grid-area: 1 / 4 / 2 / 6;
     } 
 
 
@@ -244,12 +247,10 @@
         position: absolute;
         width: 100%;
         height: 100%;
-
+        object-fit: fill;
         left: 0;      
         border-top-left-radius: var(--borderRadius);
         border-top-right-radius: var(--borderRadius);
-
-        grid-area: 1 / 4 / 2 / 6;
     }
        
     /* SONGLIST */
@@ -395,6 +396,13 @@
     }
 
 
+
+
+
+
+
+
+
 /*---------- ARTICLE - SECOND----------*/
 /*---------- ARTICLE - SECOND----------*/
 /*---------- ARTICLE - SECOND----------*/
@@ -412,7 +420,7 @@
         border: 1px solid #ffffff;
         border-radius: var(--borderRadius);
         padding: 12px;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
 
         display: grid;
         grid-template-columns: repeat(5, minmax(100px, 1fr));
@@ -438,17 +446,14 @@
     /* number-1-icon */
     main article:nth-child(2) > div:first-child > div:first-child > h1::after {
     background-image: url("media/number-1-icon.png");
-    background-size: 35px;
+    background-size: 40px;
     display: inline-block;
-
-    /* VISIBLE AREA OF THE ICON(S) */
-    width: 35px;
-    height: 35px;
-    
+    width: 40px;
+    height: 40px;
     content: "";
     position: absolute;
-    right: 641px;
-    bottom: 24px;
+    right: 650px;
+    bottom: 20px;
     /* kanske % är bättre vid media queries?
     right: 97%;
     bottom: 64%; */
@@ -462,9 +467,12 @@
     /* MUSICIANS */
     main article:nth-child(2)> div:first-child > div:nth-child(2) {
         margin: 2vh 0vh;
-        
         color:white; 
     }
+
+    main article:nth-child(2) > div:first-child > div:nth-child(2) > p {
+        margin: 0px;
+    } 
 
     main article:nth-child(2) > div:first-child > div:nth-child(2) > ul {
         margin: 0px;
@@ -496,13 +504,11 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        
+        object-fit:cover;
         opacity: 1;
         z-index: 1;
         border-top-left-radius: var(--borderRadius);
         border-top-right-radius: var(--borderRadius);
-
-        grid-area: 1 / 4 / 2 / 6;
     } 
 
 
@@ -520,7 +526,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-
+        object-fit: cover;
         left: 0;      
         border-top-left-radius: var(--borderRadius);
         border-top-right-radius: var(--borderRadius);
