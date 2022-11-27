@@ -6,19 +6,15 @@
 
     --text: calc(100vw - 30 px);
     --font: 100vw;
+
     /*  font-size: 34vw  sedan calc? 
     @media (min-width: 1000px){
-            h1 {
-              font-size: 36px;
-            }
-        
-            p {
-              font-size: 20px;
-            }
+            h1 {font-size: 36px;}
+            p {font-size: 20px;}
     }        
 }*/
+
 :root {
-    /* --borderRadius: 16px; */
     --borderRadius: 16px;
     --paddingLarge: 16px;
     --margin10: 10vh;
@@ -27,458 +23,189 @@
 
 /*---------- BODY ----------*/
 
-    body {
-        margin: 0;
-        height: 100vh; 
-        box-sizing: border-box;
-        color: white;
-    } 
+body {
+    margin: 0;
+    height: 100vh; 
+    box-sizing: border-box;
+    color: white;
+} 
 
 
 /* --------------------------------------------------------------------------------- */
-/*  FONTS | DESKTOP */
+/*  FONTS | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    body header h1{
-        font-family: "Bungee shade";
-        /* font-size: 6.5vw; räkna om till 3vw till 6.5vw */
-        font-size: calc(6.5 * var(--font-size));
-    }
-    
-    body main h1 { 
-        font-family: "Bungee Outline"; 
-        font-size: calc(3 * var(--font-size));
-        margin: 5px 0px;
-    }
+body header h1{
+    font-family: "Bungee shade";
+    /* font-size: 6.5vw; räkna om till 3vw till 6.5vw */
+    font-size: calc(6.5 * var(--font-size));
+}
 
-    body main h2 { 
-        font-family: "Barlow Semi Condensed"; 
-        font-size: (2.5 * var(--font-size));
-        margin-bottom: 14vh;
-        margin-top: 0vh;
-    }
-    
-    body {
-        font-family: "Barlow Condensed";
-        font-size: calc(1.6 * var(--font-size));
-    }
-   
+body main h1 { 
+    font-family: "Bungee Outline"; 
+    font-size: calc(3 * var(--font-size));
+    margin: 5px 0px;
+}
+
+body main h2 { 
+    font-family: "Barlow Semi Condensed"; 
+}
+
+body {
+    font-family: "Barlow Condensed";
+    font-size: calc(1.6 * var(--font-size));
+}
+
 
 /* --------------------------------------------------------------------------------- */
-/*  WRAPPER | DESKTOP */
+/*  WRAPPER | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    /* WRAPPER WITH BACKGROUND IMAGE*/
-    body > div {
-        padding: 100px 40px;
-        
-        /* IMAGE */
-        background-image: url("images/img-desktop/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
-        background-size: 100vw 75vw;
-        background-position: top right;
-        background-repeat: no-repeat;
-        /*Fixerar bilden på sin position.  */
-        background-attachment: fixed;
-    }
+/* WRAPPER WITH BACKGROUND IMAGE*/
+body > div {
+    padding: 100px 40px;
+    
+    /* IMAGE */
+    background-image: url("images/img-large-screen/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
+    background-size: 100vw 75vw;
+    background-position: top right;
+    background-repeat: no-repeat;
+    /*Fixerar bilden på sin position.  */
+    background-attachment: fixed;
+}
 
-    /* CONTENT-WRAPPER - BLACK TRANSPARENT BACKGROUND*/
-    body > div > div {
-        padding: var(--paddingLarge);
-        background-color: rgba(64, 64, 64, 0.5);
-        border-radius: var(--borderRadius);
-    }
+/* CONTENT-WRAPPER - BLACK TRANSPARENT BACKGROUND*/
+body > div > div {
+    padding: var(--paddingLarge);
+    background-color: rgba(64, 64, 64, 0.5);
+    border-radius: var(--borderRadius);
+}
 
 
 /* --------------------------------------------------------------------------------- */
-/*  HEADER | DESKTOP */
+/*  HEADER | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
    
-    /* HEADING */
-    header h1 {
-        height: 150px;
-        font-size:calc(7.5 * var(--font-size));
-        margin: 0; 
-        line-height: 1;
-    }
+/* HEADING */
+header h1 {
+    height: 150px;
+    font-size:calc(7.5 * var(--font-size));
+    margin: 0; 
+    line-height: 1;
+}
 
 
 /* --------------------------------------------------------------------------------- */
-/*  NAVIGATION | DESKTOP */
+/*  NAVIGATION | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    /* NAVIGATION BAR*/
-    body:nth-child(2) nav {
-        width: 100%;
-        display: flex;
-        margin: 30px 0px 70px 0px;
+/* NAVIGATION BAR*/
+body:nth-child(2) nav {
+    width: 100%;
+    display: flex;
+    margin: 30px 0px 70px 0px;
+}
+
+/* NAVIGATION LINKS */
+body:nth-child(2) nav div {
+    width: 80%;
+    font-size: calc(2 * var(--font-size));
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    border-radius: calc(var(--borderRadius) / 2);
+    padding: var(--paddingLarge);
+    margin: 2px;
+
+    display: inline-block;
+    text-align: center;
     }
 
-    /* NAVIGATION LINKS */
-    body:nth-child(2) nav div {
-        width: 80%;
-        font-size: calc(2 * var(--font-size));
-        color: black;
-        background-color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        border-radius: calc(var(--borderRadius) / 2);
-       
-        padding: var(--paddingLarge);
-        margin: 2px;
+/* NAVIGATION HOVER */
+body:nth-child(2) nav div:hover { 
+    color: white;
+    background-color: black;
+    border-color: black;
+}
 
-        display: inline-block;
-        text-align: center;
-        }
+/* NAVIGATION ACTIVE */
+body:nth-child(2) nav div:nth-child(2) {
+    box-shadow: 0 0 4px 1px rgba(187, 189, 190, 0.84);
+    border: 1px solid white;
+    color: black;
+    font-weight: bold;
+    font-family: "Barlow Semi Condensed";
+}
 
-    /* NAVIGATION HOVER */
-    body:nth-child(2) nav div:hover { 
-        color: white;
-        background-color: black;
-        border-color: black;
-    }
-
-    /* NAVIGATION ACTIVE */
-    body:nth-child(2) nav div:nth-child(2) {
-        box-shadow: 0 0 4px 1px rgba(187, 189, 190, 0.84);
-        border: 1px solid white;
-        color: black;
-        font-weight: bold;
-        font-family: "Barlow Semi Condensed";
-    }
-
-    /* HOVER_NOT */
-    body:nth-child(2) nav div:nth-child(2):hover { 
-        pointer-events:none;
-    }
+/* HOVER_NOT */
+body:nth-child(2) nav div:nth-child(2):hover { 
+    pointer-events:none;
+}
 
 
 /* --------------------------------------------------------------------------------- */
-/*  MAIN | DESKTOP */
+/*  MAIN | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    main {
-        margin: 50px 0px;
-        border-radius: var(--borderRadius);
-        position: relative;
-    }
+main {
+    margin: 50px 0px;
+    margin-bottom: 15vh;
+    border-radius: var(--borderRadius);
+    position: relative;
+}
 
-    /* TRANSPARENT BACKGROUND */
-    main > article {
-        background-color: #00000080;
-        border-radius: var(--borderRadius);
-    }
+/* TRANSPARENT BACKGROUND */
+main > article {
+    background-color: #00000080;
+    border-radius: var(--borderRadius);
+}
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ARTICLE | FIRST | DESKTOP */
+/*  ARTICLE | BOTH | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
+/*  ALBUM DATA | LARGE SCREEN */
 
-/* --------------------------------------------------------------------------------- */
-/*  ALBUM DATA | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
+/* ALBUM DATA */
+main article {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    border-radius: var(--borderRadius);
+    padding: 12px;
+    margin-bottom: 20px;
 
-    /* ALBUM DATA */
-    main article:first-child{
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid #ffffff;
-        border-radius: var(--borderRadius);
-        padding: 12px;
-        margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, max-content);
+}
 
-        display: grid;
-        grid-template-columns: repeat(5, minmax(100px, 1fr));
-        grid-template-rows: repeat(3, max-content);
-    }
+main article > div:first-child {
+    grid-area: 1 / 1 / 2 / 4;
+    padding-right: 7px;    
+}
 
-    main article:first-child> div:first-child {
-        grid-area: 1 / 1 / 2 / 4;
-        padding-right: 7px;    
-    }
+/* ALBUM DATA TITEL */
+main article > div:first-child > div:first-child {
+    color:white;
+}
 
-    /* ALBUM DATA TITEL AND RELEASE DATE */
-    main article:first-child> div:first-child > div:first-child {
-        color:white;
-    }
+/* RELEASE DATE */
+main article > div:first-child > div:first-child > h2{
+    font-size: calc(2.5 * var(--font-size));
+    margin: 0;
+    margin-bottom: 14vh;
+}
 
-    /* ALBUM NAME */
-    main article:nth-child(1) > div:first-child > div:first-child > h1 {
-        line-height: 1;
-    }
+/* ALBUM NAME */
+main article > div:first-child > div:first-child > h1 {
+    line-height: 1;
+    position: relative;
+}
 
-    /* DATE OF RELEASE */
-    main article:nth-child(1) h2 {
-        line-height: 1;
-    }
-
-    /* MUSICIANS */
-    main article:nth-child(1)> div:first-child > div:nth-child(2) {
-        color: white;      
-    }
-
-    main article:nth-child(1)> div:first-child > div:nth-child(2) p {
-        margin: 0;   
-    }
-
-    main article:nth-child(1)> div:first-child > div:nth-child(2) ul {
-        margin: 0;   
-    }
-
-    main article:nth-child(1)> div:first-child > div:nth-child(2) li { 
-        margin-top: 0;
-        list-style: none;
-    }
-
-    /* ALBUM DESCRIPTION */
-    main article:nth-child(1)> div:first-child > div:nth-child(3) p {
-        color: white;
-        margin-top: var(--margin10);
-    }
-
-
-/* --------------------------------------------------------------------------------- */
-/*  ALBUM COVER | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
-
-    /* ALBUM COVER*/
-    main article:nth-child(1)> div:nth-child(2) {
-        /* background-color: rgb(93, 3, 15); */
-        
-        position: relative;
-        max-width: 100%;
-        grid-area: 1 / 4 / 2 / 6;
-    }
-
-    /* ALBUM FRONTCOVER */
-    main article:nth-child(1)> div:nth-child(2) > img:first-of-type {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 1;
-        z-index: 1;
-        border-top-left-radius: var(--borderRadius);
-        border-top-right-radius: var(--borderRadius);
-    } 
-
-    /* ALBUM FRONTCOVER - HOVER */
-    main article:nth-child(1)> div:nth-child(2) > img:first-of-type:hover  {
-        transition-property: opacity;
-        transition-duration: 2s;
-        opacity: 0;
-        border-top-left-radius: var(--borderRadius);
-        border-top-right-radius: var(--borderRadius);
-    }
-
-    /* ALBUM BACKCOVER */
-    main article:nth-child(1)> div:nth-child(2) > img:last-of-type  {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        left: 0;      
-        border-top-left-radius: var(--borderRadius);
-        border-top-right-radius: var(--borderRadius);
-    }
-
-
-/* --------------------------------------------------------------------------------- */
-/*  SONGLIST | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
-
-    /* GRID CONTAINER */
-    main article > div:nth-child(3) {
-        grid-area: 2 / 4 / 3 / 6;
-
-        display: grid;
-        grid-template-columns: repeat(2, minmax(50px, 1fr));
-        grid-template-rows: 1fr;
-
-        box-sizing: border-box;
-        border-bottom-right-radius: var(--borderRadius);
-        gap: 8px;
-        margin-top: 8px;
-        align-items: baseline;
-        justify-content: start;
-    }
-
-    /* SONGLIST ONE */
-    main article > div:nth-child(3) > div:first-child {
-        color: #c29546;
-        background-color: #5d030f;
-       /*  padding-left: 5px; */
-        height: 100%;
-        grid-area: 1 / 1 / 2 / 2;
-    }
-
-    /* SONGLIST TWO */
-    main article > div:nth-child(3) > div:last-child {
-        color: #c29546;
-        background-color: #5d030f;
-        height: 100%;
-        grid-area: 1 / 2 / 2 / 3;
-    }
-
-    /* HEADING ATTRIBUTE */
-    main article > div:nth-child(3) > div:first-child h2,
-    main article > div:nth-child(3) > div:last-child h2 {
-        font-family: "Barlow Condensed";
-        font-size: calc(1.8 * var(--font-size));
-        margin: 20px 25px 0px 15px;
-    }
-
-    /* LIST ATTRIBUTE*/
-    main article > div:nth-child(3) > div:first-child ul,
-    main article > div:nth-child(3) > div:last-child ul {
-        list-style: decimal;
-        margin: 0px;
-        padding: 0px 0px 20px 35px;
-        font-size: calc(1.4 * var(--font-size));
-    }
-
-/* --------------------------------------------------------------------------------- */
-/*  ANECDOTES | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
-
-    /* GRID CONTAINER */
-    main article > ul:nth-child(4) {
-        grid-area: 3 / 1 / 4 / 6;
-
-        color: #5d030f;
-        font-size: calc(1.6 * var(--font-size));
-        list-style: none;
-        padding: 0px;
-        column-gap: 8px;
-        margin: 0px;
-      
-        display: grid;
-        grid-template-columns: repeat(6, minmax(100px, 1fr));
-        grid-template-rows: minmax(280px, 2fr);
-    }
-
-    /* LIST ATTRIBUTE */
-    main article > ul:nth-child(4) > li:nth-child(1),
-    main article > ul:nth-child(4) > li:nth-child(3),
-    main article > ul:nth-child(4) > li:nth-child(6),
-    main article > ul:nth-child(4) > li:nth-child(7) {
-        background-color: #c29546;
-        padding: 25px;
-
-        display: flex;
-        align-items: center;
-        border-radius: var(--borderRadius);
-    }
-
-    /* NUMBER ONE */
-    main article:nth-child(1)> ul:nth-child(4) > li:nth-child(1) {
-        order: 1;
-
-        border-top-right-radius: 0px;
-        grid-area: 1 / 1 / 2 / 2;
-    }
-
-    /* NUMBER TWO - empty desktop*/
-    main article:nth-child(1)> ul:nth-child(4) > li:nth-child(2) {
-        order: 2;
-
-        grid-area: 1 / 2 / 2 / 3;
-    }
-
-    /* NUMBER THREE */
-    main article:nth-child(1)> ul:nth-child(4) > li:nth-child(3) {
-        order: 3;
-      
-        border-bottom-left-radius: 0px;
-        grid-area: 1 / 3 / 2 / 5;
-    }
-
-     /* NUMBER FOUR - empty tablet */
-     main article:nth-child(1)> ul:nth-child(4) > li:nth-child(4) {
-        order: 4;
-    }
-
-     /* NUMBER FIVE empty - phone*/
-     main article:nth-child(1)> ul:nth-child(4) > li:nth-child(5) {
-        order: 5;
-    }
-
-     /* NUMBER SIX */
-     main article:nth-child(1)> ul:nth-child(4) > li:nth-child(6) {
-        order: 6;
-        color: white;
-        background-image: url("images/img-desktop/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times.jpg");
-/*         background-image: url("images/img-desktop/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times160x160Kvalite90.jpg"); */
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        align-items: flex-end;
-        border-top-left-radius: 0px;
-        grid-area: 1 / 5 / 2 / 6;
-    }
-
-     /* NUMBER SEVEN */
-     main article:nth-child(1)> ul:nth-child(4) > li:nth-child(7) {
-        order: 7;
-
-        border-bottom-right-radius: 0px;
-        grid-area: 1 / 6 / 2 / 7;
-    }
-
-
-
-
-
-
-
-
-
-/*---------- ARTICLE - SECOND----------*/
-/*---------- ARTICLE - SECOND----------*/
-/*---------- ARTICLE - SECOND----------*/
-/*---------- ARTICLE - SECOND----------*/
-/*---------- ARTICLE - SECOND----------*/
-/*---------- ARTICLE - SECOND----------*/
-
-/* --------------------------------------------------------------------------------- */
-/*  ARTICLE | SECOND | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
-
-
-/* --------------------------------------------------------------------------------- */
-/*  ALBUM DATA | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
-
-    /* ALBUM DATA */
-    main article:nth-child(2) {
-        width: 100%;
-        box-sizing: border-box;
-        border: 1px solid #ffffff;
-        border-radius: var(--borderRadius);
-        padding: 12px;
-        margin-bottom: 20px;
-
-        display: grid;
-        grid-template-columns: repeat(5, minmax(100px, 1fr));
-        grid-template-rows: repeat(3, max-content);
-    }
-
-    main article:nth-child(2) > div:first-child {
-        grid-area: 1 / 1 / 2 / 4;
-        padding-right: 7px;    
-    }
-
-    /* TITEL AND RELEASE DATE */
-    main article:nth-child(2)> div:first-child > div:first-child {
-        color:white;
-    }
-
-    /* ALBUM NAME */
-    main article:nth-child(2) > div:first-child > div:first-child > h1 {
-        line-height: 1;
-        position: relative;
-    }
-
-    /* number-1-icon */
-    main article:nth-child(2) > div:first-child > div:first-child > h1::after {
+/* number-1-icon */
+main article:nth-child(2) > div:first-child > div:first-child > h1::after {
     background-image: url("media/number-1-icon.png");
     background-size: 40px;
     display: inline-block;
@@ -493,249 +220,335 @@
     bottom: 64%; */
     }
 
-    /* DATE OF RELEASE */
-    main article:nth-child(2) h2 {
-        line-height: 1;
-    }
+/* DATE OF RELEASE */
+main article > h2 {
+    line-height: 1;
+    font-size: (2.5 * var(--font-size));
+}
 
-    /* MUSICIANS */
-    main article:nth-child(2)> div:first-child > div:nth-child(2) {
-        margin: 2vh 0vh;
-        color:white; 
-    }
+/* MUSICIANS */
+main article > div:first-child > div:nth-child(2) {
+    color: white; 
+    margin: 2vh 0vh;    
+}
 
-    main article:nth-child(2) > div:first-child > div:nth-child(2) > p {
-        margin: 0px;
-    } 
+main article > div:first-child > div:nth-child(2) p {
+    margin: 0;   
+}
 
-    main article:nth-child(2) > div:first-child > div:nth-child(2) > ul {
-        margin: 0px;
-    }   
+main article > div:first-child > div:nth-child(2) ul {
+    margin: 0;   
+}
 
-    main article:nth-child(2)> div:first-child > div:nth-child(2) li { 
-        margin: 0px;
-        list-style: none;
-    }
+main article > div:first-child > div:nth-child(2) li { 
+    margin-top: 0;
+    list-style: none;
+}
 
-    /* ALBUM DESCRIPTION */
-    main article:nth-child(2) > div:first-child > div:nth-child(3) p {
-        color:white;
-        margin-top: var(--margin10);
-    }
-
-
-/* --------------------------------------------------------------------------------- */
-/*  ALBUM COVER | DESKTOP */
-/* --------------------------------------------------------------------------------- */   
-
-    /* ALBUM COVER*/
-    main article:nth-child(2) > div:nth-child(2) {
-        /* background-color: rgb(93, 3, 15); */
-        
-        position: relative;
-        max-width: 100%;
-        grid-area: 1 / 4 / 2 / 6;
-    }
-
-    /* ALBUM FRONTCOVER */
-    main article:nth-child(2) > div:nth-child(2) > img:first-of-type {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-        opacity: 1;
-        z-index: 1;
-        border-top-left-radius: var(--borderRadius);
-        border-top-right-radius: var(--borderRadius);
-    } 
-
-    /* ALBUM FRONTCOVER - HOVER */
-    main article:nth-child(2) > div:nth-child(2) > img:first-of-type:hover  {
-        transition-property: opacity;
-        transition-duration: 2s;
-        opacity: 0;
-        border-top-left-radius: var(--borderRadius);
-        border-top-right-radius: var(--borderRadius);
-    }
-
-    /* ALBUM BACKCOVER */
-    main article:nth-child(2) > div:nth-child(2) > img:last-of-type  {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        left: 0;      
-        border-top-left-radius: var(--borderRadius);
-        border-top-right-radius: var(--borderRadius);
-
-        grid-area: 1 / 4 / 2 / 6;
-    }
+/* ALBUM DESCRIPTION */
+main article > div:first-child > div:nth-child(3) p {
+    color: white;
+    margin-top: var(--margin10);
+    margin-right: var(--paddingLarge);
+}
 
 
 /* --------------------------------------------------------------------------------- */
-/*  SONGLIST | DESKTOP */
+/*  ALBUM COVER | BOTH | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    /* GRID CONTAINER */
-    main article:nth-child(2) > div:nth-child(3) {
-        grid-area: 2 / 4 / 3 / 6;
+/* ALBUM COVER*/
+main article > div:nth-child(2) {
+/* background-color: rgb(93, 3, 15); */
+    position: relative;
+    max-width: 100%;
+    grid-area: 1 / 4 / 2 / 6;
+}
 
-        display: grid;
-        grid-template-columns: repeat(2, minmax(50px, 1fr));
-        grid-template-rows: max-content;
-        
-        gap: 8px;
-        margin-top: 8px;
-        align-items: baseline;
-        justify-content: start;
-    }
+/* ALBUM FRONTCOVER */
+main article > div:nth-child(2) > img:first-of-type {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1;
+    border-top-left-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
+} 
 
-    /* HEADING ATTRIBUTE */
-    main article:nth-child(2) > div:nth-child(3) > div:first-child h2,
-    main article:nth-child(2) > div:nth-child(3) > div:last-child h2 {
-        font-family: "Barlow Condensed";
-        font-size: calc(1.8 * var(--font-size));
-        margin-top: var(--paddingLarge);
-    }
+/* ALBUM FRONTCOVER - HOVER */
+main article > div:nth-child(2) > img:first-of-type:hover  {
+    transition-property: opacity;
+    transition-duration: 2s;
+    opacity: 0;
+    border-top-left-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
+} 
 
-    /* LIST ATTRIBUTE*/
-    main article:nth-child(2) > div:nth-child(3) > div:first-child ul,
-    main article:nth-child(2) > div:nth-child(3) > div:last-child ul {
-        list-style: decimal;
-        margin: 0px;
-        padding: 0px 0px 12px 30px;
-        font-size: calc(1.4 * var(--font-size));
-    }
+/* ALBUM BACKCOVER */
+main article > div:nth-child(2) > img:last-of-type  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    left: 0;      
+    border-top-left-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
+}
 
-    /* SONGLIST ONE */
-    main article:nth-child(2) > div:nth-child(3) > div:first-child {
+
+/* --------------------------------------------------------------------------------- */
+/*  SONGLIST | BOTH | LARGE SCREEN */
+/* --------------------------------------------------------------------------------- */   
+
+/* GRID CONTAINER */
+main article > div:nth-child(3) {
+    grid-area: 2 / 4 / 3 / 6;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    grid-template-rows: 1fr;
+
+    box-sizing: border-box;
+    border-bottom-right-radius: var(--borderRadius);
+    gap: 8px;
+    margin-top: 8px;
+    align-items: baseline;
+    justify-content: start;
+}
+
+/* SONGLIST | BOTH | ONE */
+main article > div:nth-child(3) > div:first-child {
+    height: 100%;
+    border-bottom-left-radius: var(--borderRadius);
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* SONGLIST | FIRST | ONE */
+main article:first-child > div:nth-child(3) > div:first-child {
+    color: #c29546;
+    background-color: #5d030f;       
+}
+
+/* SONGLIST | SECOND | ONE */
+main article:nth-child(2) > div:nth-child(3) > div:first-child {
         color: rgb(191, 134, 28);
         background-color: #9b301c;
-       
-        border-bottom-left-radius: var(--borderRadius);
+}
 
-        height: 100%;
-        grid-area: 1 / 1 / 2 / 2;
-    }
+/* SONGLIST | BOTH | TWO */
+main article > div:nth-child(3) > div:last-child {
+    height: 100%;
+    border-bottom-right-radius: var(--borderRadius);
+    grid-area: 1 / 2 / 2 / 3;
+}
 
-    /* SONGLIST TWO */
-    main article:nth-child(2) > div:nth-child(3) > div:last-child {
-        color: rgb(191, 134, 28);
-        background-color: #9b301c;
-        
-        border-bottom-right-radius: var(--borderRadius);
+/* SONGLIST | FIRST | TWO */
+main article:first-child > div:nth-child(3) > div:last-child {
+    color: #c29546;
+    background-color: #5d030f;
+}
 
-        height: 100%;
-        grid-area: 1 / 2 / 2 / 3;
-    }
+/* SONGLIST | SECOND | TWO */
+   main article:nth-child(2) > div:nth-child(3) > div:last-child {
+    color: rgb(191, 134, 28);
+    background-color: #9b301c;
+}
+
+/* HEADING | ATTRIBUTE */
+main article > div:nth-child(3) > div:first-child h2,
+main article > div:nth-child(3) > div:last-child h2 {
+    font-family: "Barlow Condensed";
+    font-size: calc(1.8 * var(--font-size));
+    margin: 20px 25px 0px 15px;
+}
+
+/* LIST | ATTRIBUTE */
+main article > div:nth-child(3) > div:first-child ul,
+main article > div:nth-child(3) > div:last-child ul {
+    list-style: decimal;
+    margin: 0px;
+    padding: 0px 0px 12px 30px;
+    font-size: calc(1.4 * var(--font-size));
+}
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ANECDOTES | DESKTOP */
+/*  ANECDOTES | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    /* GRID CONTAINER */
-    main article:nth-child(2) > ul:nth-child(4) {
-        grid-area: 3 / 1 / 4 / 6;
+/* GRID CONTAINER */
+main article > ul:nth-child(4) {
+    grid-area: 3 / 1 / 4 / 6;
 
-        font-size: calc(1.6 * var(--font-size));
-        list-style: none;
-        padding-left: 0px;
-        margin-top: 8px;
-        margin-bottom: 0px;
-      
-        display: grid;
-        grid-template-columns: repeat(6, minmax(100px, 1fr));
-        grid-template-rows: minmax(280px, 2fr);
-    }
+    font-size: calc(1.6 * var(--font-size));
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    column-gap: 4px;
 
-    /* LIST ATTRIBUTE */
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1),
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(2),
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5),
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
-        color: #9b301c;
-        background-color: rgb(191, 134, 28);
-        padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-rows: minmax(280px, 2fr);
+}
 
-        display: flex;
-        align-items: center;
-        border-radius: var(--borderRadius);
-    }
-
-    /* NUMBER ONE */
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1) {
-        order: 1;
-
-        border-bottom-left-radius: 0px;
-        grid-area: 1 / 1 / 2 / 3;
-    }
-
-    /* NUMBER TWO */
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(2) {
-        order: 2;
-        border-top-left-radius: 0px;
-        grid-area: 1 / 3 / 2 / 4;
-    }
-
-    /* NUMBER THREE - empty tablet */
-    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(3) {
-        order: 3;
-    }
-
-     /* NUMBER FOUR - empty tablet */
-     main article:nth-child(2) > ul:nth-child(4) > li:nth-child(4) {
-        order: 4;
-    }
-
-     /* NUMBER FIVE */
-     main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5) {
-        order: 5;
-        color: rgb(204, 204, 204);
-        /* TEXTEN ska vara låtnamnet ovan för deras namn i  bilden */
-        background-image: url("images/img-desktop/album_02/A-deva_cover_large_500x500Kvalitet-70.jpg");
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        align-items: flex-end;
-        border-top-left-radius: 0px;
-        grid-area: 1 / 4 / 2 / 6;
-    }
-
-     /* NUMBER SIX */
-     main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
-        order: 6;
-
-        border-bottom-right-radius: 0px;
-        grid-area: 1 / 6 / 2 / 7;
-    }
 
 /* --------------------------------------------------------------------------------- */
-/*  FOOTER | DESKTOP */
+/*  ANECDOTES | FIRST ARTICLE | LARGE SCREEN */
 /* --------------------------------------------------------------------------------- */   
 
-    /* FOOTER 
-        footer {
-        }
-    */
+/* LIST ATTRIBUTE */
+main article:first-child > ul:nth-child(4) > li:nth-child(1),
+main article:first-child > ul:nth-child(4) > li:nth-child(3),
+main article:first-child > ul:nth-child(4) > li:nth-child(6),
+main article:first-child > ul:nth-child(4) > li:nth-child(7) {
+    background-color: #c29546;
+    color: #5d030f;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    border-radius: var(--borderRadius);
+}
+
+/* NUMBER ONE */
+main article:nth-child(1)> ul:nth-child(4) > li:nth-child(1) {
+    order: 1;
+    border-top-right-radius: 0px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* NUMBER TWO - empty LARGE SCREEN*/
+main article:nth-child(1)> ul:nth-child(4) > li:nth-child(2) {
+    order: 2;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+/* NUMBER THREE */
+main article:nth-child(1)> ul:nth-child(4) > li:nth-child(3) {
+    order: 3;
+  
+    border-bottom-left-radius: 0px;
+    grid-area: 1 / 3 / 2 / 5;
+}
+
+/* NUMBER FOUR - empty tablet */
+main article:nth-child(1)> ul:nth-child(4) > li:nth-child(4) {
+    order: 4;
+}
+
+ /* NUMBER FIVE empty - phone*/
+ main article:nth-child(1)> ul:nth-child(4) > li:nth-child(5) {
+    order: 5;
+}
+
+/* NUMBER SIX */
+main article:nth-child(1)> ul:nth-child(4) > li:nth-child(6) {
+    order: 6;
+    color: white;
+    background-image: url("images/img-large-screen/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times.jpg");
+/*  background-image: url("images/img-large-screen/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times160x160Kvalite90.jpg"); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    border-top-left-radius: 0px;
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+/* NUMBER SEVEN */
+main article:nth-child(1)> ul:nth-child(4) > li:nth-child(7) {
+    order: 7;
+    border-bottom-right-radius: 0px;
+    grid-area: 1 / 6 / 2 / 7;
+}
 
 
+/* --------------------------------------------------------------------------------- */
+/*  ANECDOTES | SECOND ARTICLE | LARGE SCREEN */
+/* --------------------------------------------------------------------------------- */   
+
+/* LIST ATTRIBUTE */
+ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1),
+ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(2),
+ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5),
+ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
+    color: #9b301c;
+    background-color: rgb(191, 134, 28);
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    border-radius: var(--borderRadius);
+ }
+
+/* NUMBER ONE */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1) {
+    order: 1;
+    border-bottom-left-radius: 0px;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+/* NUMBER TWO */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(2) {
+    order: 2;
+    border-top-left-radius: 0px;
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+/* NUMBER THREE - empty tablet */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(3) {
+    order: 3;
+}
+
+/* NUMBER FOUR - empty tablet */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(4) {
+    order: 4;
+}
+
+/* NUMBER FIVE */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5) {
+    order: 5;
+    color: rgb(204, 204, 204);
+    /* TEXTEN ska vara låtnamnet ovan för deras namn i  bilden */
+    background-image: url("images/img-large-screen/album_02/A-deva_cover_large_500x500Kvalitet-70.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    border-top-left-radius: 0px;
+    grid-area: 1 / 4 / 2 / 6;
+}
+
+/* NUMBER SIX */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
+    order: 6;
+
+    border-bottom-right-radius: 0px;
+    grid-area: 1 / 6 / 2 / 7;
+}
 
 
+/* --------------------------------------------------------------------------------- */
+/*  FOOTER | LARGE SCREEN */
+/* --------------------------------------------------------------------------------- */   
 
-
-
+/* FOOTER 
+    footer {
+    }
+*/
 
 
 
 
 
 /*---------- MEDIA QUERIES DESKTOP ----------*/
-/* DESKTOP */
+/* LARGE SCREEN */
 @media (min-width: 800px) and (max-width:1111px){
-    /* IMG-BACKGROUND */
+    /* img-large-screen-BACKGROUND */
     body {
-    background-image: url("img-desktop/A-deva_cover_desktop_1280x1280.jpg");
+    background-image: url("img-large-screen/A-deva_cover_large-screen_1280x1280.jpg");
     
 
         /* Hugo:
@@ -772,4 +585,5 @@
         height: 100%;
     }
 }
+
 
