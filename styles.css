@@ -32,33 +32,50 @@ body {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  FONTS | LARGE SCREEN */
+/*  FONT | LARGER SCREENS */
 /* --------------------------------------------------------------------------------- */   
+body {
+    font-family: "Barlow Condensed";
+    font-size: 18px;
+}    
 
-body header h1{
+body header h1 {
     font-family: "Bungee shade";
-    /* font-size: 6.5vw; räkna om till 3vw till 6.5vw */
-    font-size: calc(6.5 * var(--font-size));
+    font-size: 73px;
 }
 
 body main h1 { 
+    font-size: 33px;
     font-family: "Bungee Outline"; 
-    font-size: calc(3 * var(--font-size));
     margin: 5px 0px;
+    line-height: 1.4;
 }
-
+ /* Hugo:
+    Jag inspekterade i firefox när bredden var på 1111px och kollat vad storleken var då och lagt fast strl när den når över 1111px. EX. h1 {font-size: 44.4px;}
+    */
 body main h2 { 
     font-family: "Barlow Semi Condensed"; 
+    line-height: 1.4;
+    font-size: 28px;
 }
 
-body {
-    font-family: "Barlow Condensed";
-    font-size: calc(1.6 * var(--font-size));
+/* MAIN | ARTICLE | HEADING | ATTRIBUTE */
+main article > div:nth-child(3) > div:first-child h2,
+main article > div:nth-child(3) > div:last-child h2 {
+    font-size: 22px;
 }
+
+/* MAIN | ARTICLE | LIST | ATTRIBUTE */
+main article > div:nth-child(3) > div:first-child ul,
+main article > div:nth-child(3) > div:last-child ul {
+    font-size: 16px;
+}
+
+
 
 
 /* --------------------------------------------------------------------------------- */
-/*  WRAPPER | LARGE SCREEN */
+/*  WRAPPER | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* WRAPPER WITH BACKGROUND IMAGE*/
@@ -66,7 +83,7 @@ body > div {
     padding: 100px 40px;
     
     /* IMAGE */
-    background-image: url("images/img-large-screen/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
+    background-image: url("images/img-desktop/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
     background-size: 100vw 75vw;
     background-position: top right;
     background-repeat: no-repeat;
@@ -83,20 +100,20 @@ body > div > div {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  HEADER | LARGE SCREEN */
+/*  HEADER | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
    
 /* HEADING */
 header h1 {
     height: 150px;
-    font-size:calc(7.5 * var(--font-size));
+    font-size:83.4px;
     margin: 0; 
     line-height: 1;
 }
 
 
 /* --------------------------------------------------------------------------------- */
-/*  NAVIGATION | LARGE SCREEN */
+/*  NAVIGATION | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* NAVIGATION BAR*/
@@ -109,7 +126,7 @@ body:nth-child(2) nav {
 /* NAVIGATION LINKS */
 body:nth-child(2) nav div {
     width: 80%;
-    font-size: calc(2 * var(--font-size));
+    font-size: 22.3px;
     color: black;
     background-color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
@@ -144,7 +161,7 @@ body:nth-child(2) nav div:nth-child(2):hover {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  MAIN | LARGE SCREEN */
+/*  MAIN | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 main {
@@ -162,12 +179,12 @@ main > article {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ARTICLE | BOTH | LARGE SCREEN */
+/*  ARTICLE | BOTH | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
-/*  ALBUM DATA | LARGE SCREEN */
+/*  ALBUM | LARGE SCREENS */
 
-/* ALBUM DATA */
+/* ALBUM */
 main article {
     width: 100%;
     box-sizing: border-box;
@@ -177,25 +194,29 @@ main article {
     margin-bottom: 20px;
 
     display: grid;
-    grid-template-columns: repeat(5, minmax(100px, 1fr));
-    grid-template-rows: repeat(3, max-content);
+    grid-template-columns: 8fr 5.8fr;
+    grid-template-rows: 2fr 1fr 1fr;
 }
 
+/* ALBUM DATA */
 main article > div:first-child {
-    grid-area: 1 / 1 / 2 / 4;
-    padding-right: 7px;    
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin-right: 1.2vw;
+    /* padding-right: 7px;  */   
 }
 
-/* ALBUM DATA TITEL */
+/* ALBUM DATA | TITEL */
 main article > div:first-child > div:first-child {
     color:white;
 }
 
 /* RELEASE DATE */
 main article > div:first-child > div:first-child > h2{
-    font-size: calc(2.5 * var(--font-size));
     margin: 0;
-    margin-bottom: 14vh;
+    /* margin-bottom: 14vh; */
+    line-height: 1;
+    margin-bottom: 10vh;
 }
 
 /* ALBUM NAME */
@@ -207,24 +228,19 @@ main article > div:first-child > div:first-child > h1 {
 /* number-1-icon */
 main article:nth-child(2) > div:first-child > div:first-child > h1::after {
     background-image: url("media/number-1-icon.png");
-    background-size: 40px;
+    background-size: 38px;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     content: "";
     position: absolute;
-    right: 650px;
-    bottom: 20px;
-    /* kanske % är bättre vid media queries?
+    /* right: 48vw;
+    bottom: 3vh; */
+    /* kanske % är bättre vid media queries?*/
     right: 97%;
-    bottom: 64%; */
+    bottom: 64%; 
     }
 
-/* DATE OF RELEASE */
-main article > h2 {
-    line-height: 1;
-    font-size: (2.5 * var(--font-size));
-}
 
 /* MUSICIANS */
 main article > div:first-child > div:nth-child(2) {
@@ -248,28 +264,30 @@ main article > div:first-child > div:nth-child(2) li {
 /* ALBUM DESCRIPTION */
 main article > div:first-child > div:nth-child(3) p {
     color: white;
-    margin-top: var(--margin10);
-    margin-right: var(--paddingLarge);
+    margin-top: 9vh;
+    /* margin-top: var(--margin10); */
 }
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ALBUM COVER | BOTH | LARGE SCREEN */
+/*  ALBUM COVER | BOTH | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* ALBUM COVER*/
 main article > div:nth-child(2) {
 /* background-color: rgb(93, 3, 15); */
     position: relative;
-    max-width: 100%;
-    grid-area: 1 / 4 / 2 / 6;
+    width: 100%;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
 }
 
 /* ALBUM FRONTCOVER */
 main article > div:nth-child(2) > img:first-of-type {
     position: absolute;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    object-fit: fill;
     opacity: 1;
     z-index: 1;
     border-top-left-radius: var(--borderRadius);
@@ -298,12 +316,13 @@ main article > div:nth-child(2) > img:last-of-type  {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  SONGLIST | BOTH | LARGE SCREEN */
+/*  SONGLIST | BOTH | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* GRID CONTAINER */
 main article > div:nth-child(3) {
-    grid-area: 2 / 4 / 3 / 6;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(50px, 1fr));
@@ -312,7 +331,7 @@ main article > div:nth-child(3) {
     box-sizing: border-box;
     border-bottom-right-radius: var(--borderRadius);
     gap: 8px;
-    margin-top: 8px;
+    margin: 8px 0px;
     align-items: baseline;
     justify-content: start;
 }
@@ -321,7 +340,6 @@ main article > div:nth-child(3) {
 main article > div:nth-child(3) > div:first-child {
     height: 100%;
     border-bottom-left-radius: var(--borderRadius);
-    grid-area: 1 / 1 / 2 / 2;
 }
 
 /* SONGLIST | FIRST | ONE */
@@ -332,8 +350,8 @@ main article:first-child > div:nth-child(3) > div:first-child {
 
 /* SONGLIST | SECOND | ONE */
 main article:nth-child(2) > div:nth-child(3) > div:first-child {
-        color: rgb(191, 134, 28);
-        background-color: #9b301c;
+    color: rgb(191, 134, 28);
+    background-color: #9b301c;
 }
 
 /* SONGLIST | BOTH | TWO */
@@ -359,8 +377,7 @@ main article:first-child > div:nth-child(3) > div:last-child {
 main article > div:nth-child(3) > div:first-child h2,
 main article > div:nth-child(3) > div:last-child h2 {
     font-family: "Barlow Condensed";
-    font-size: calc(1.8 * var(--font-size));
-    margin: 20px 25px 0px 15px;
+    margin: 15px 25px 0px 15px;
 }
 
 /* LIST | ATTRIBUTE */
@@ -369,33 +386,36 @@ main article > div:nth-child(3) > div:last-child ul {
     list-style: decimal;
     margin: 0px;
     padding: 0px 0px 12px 30px;
-    font-size: calc(1.4 * var(--font-size));
+    /* font-size: calc(1.4 * var(--font-size)); */
 }
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ANECDOTES | LARGE SCREEN */
+/*  ANECDOTES | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* GRID CONTAINER */
 main article > ul:nth-child(4) {
-    grid-area: 3 / 1 / 4 / 6;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
 
-    font-size: calc(1.6 * var(--font-size));
+    font-size: 18.5px;
     list-style: none;
     padding-left: 0px;
-    margin-top: 8px;
-    margin-bottom: 0px;
+    margin: 0px;
     column-gap: 4px;
+    height: 35vh;
+    
 
     display: grid;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
-    grid-template-rows: minmax(280px, 2fr);
+    grid-template-rows: minmax(min-content, 1fr);
+    /* minmax(280px, 2fr); */
 }
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ANECDOTES | FIRST ARTICLE | LARGE SCREEN */
+/*  ANECDOTES | FIRST ARTICLE | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* LIST ATTRIBUTE */
@@ -405,11 +425,11 @@ main article:first-child > ul:nth-child(4) > li:nth-child(6),
 main article:first-child > ul:nth-child(4) > li:nth-child(7) {
     background-color: #c29546;
     color: #5d030f;
-    padding: 20px;
+    padding: 12px;
+    border-radius: var(--borderRadius);
 
     display: flex;
     align-items: center;
-    border-radius: var(--borderRadius);
 }
 
 /* NUMBER ONE */
@@ -419,7 +439,7 @@ main article:nth-child(1)> ul:nth-child(4) > li:nth-child(1) {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-/* NUMBER TWO - empty LARGE SCREEN*/
+/* NUMBER TWO - empty LARGE SCREENS*/
 main article:nth-child(1)> ul:nth-child(4) > li:nth-child(2) {
     order: 2;
     grid-area: 1 / 2 / 2 / 3;
@@ -428,7 +448,6 @@ main article:nth-child(1)> ul:nth-child(4) > li:nth-child(2) {
 /* NUMBER THREE */
 main article:nth-child(1)> ul:nth-child(4) > li:nth-child(3) {
     order: 3;
-  
     border-bottom-left-radius: 0px;
     grid-area: 1 / 3 / 2 / 5;
 }
@@ -447,8 +466,7 @@ main article:nth-child(1)> ul:nth-child(4) > li:nth-child(4) {
 main article:nth-child(1)> ul:nth-child(4) > li:nth-child(6) {
     order: 6;
     color: white;
-    background-image: url("images/img-large-screen/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times.jpg");
-/*  background-image: url("images/img-large-screen/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times160x160Kvalite90.jpg"); */
+    background-image: url("images/img-desktop/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times.jpg");
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -466,7 +484,7 @@ main article:nth-child(1)> ul:nth-child(4) > li:nth-child(7) {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ANECDOTES | SECOND ARTICLE | LARGE SCREEN */
+/*  ANECDOTES | SECOND ARTICLE | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* LIST ATTRIBUTE */
@@ -476,11 +494,11 @@ main article:nth-child(1)> ul:nth-child(4) > li:nth-child(7) {
  main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     color: #9b301c;
     background-color: rgb(191, 134, 28);
-    padding: 20px;
+    padding: 12px;
+    border-radius: var(--borderRadius);
 
     display: flex;
     align-items: center;
-    border-radius: var(--borderRadius);
  }
 
 /* NUMBER ONE */
@@ -512,7 +530,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5) {
     order: 5;
     color: rgb(204, 204, 204);
     /* TEXTEN ska vara låtnamnet ovan för deras namn i  bilden */
-    background-image: url("images/img-large-screen/album_02/A-deva_cover_large_500x500Kvalitet-70.jpg");
+    background-image: url("images/img-desktop/album_02/A-deva_cover_large_500x500Kvalitet-70.jpg");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -531,7 +549,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  FOOTER | LARGE SCREEN */
+/*  FOOTER | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* FOOTER 
@@ -544,19 +562,116 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 
 
 /*---------- MEDIA QUERIES DESKTOP ----------*/
-/* LARGE SCREEN */
-@media (min-width: 800px) and (max-width:1111px){
-    /* img-large-screen-BACKGROUND */
+/* DESKTOP */
+@media (min-width: 900px) and (max-width: 1111px){
+    /* img-DESKTOP-BACKGROUND */
     body {
-    background-image: url("img-large-screen/A-deva_cover_large-screen_1280x1280.jpg");
+    background-image: url("img-desktop/A-deva_cover_desktop_1280x1280.jpg");
+    }
+
+
+
+/* --------------------------------------------------------------------------------- */
+/*  FONT | DESKTOP */
+/* --------------------------------------------------------------------------------- */   
     
+    body {
+        font-size: calc(1.6 * var(--font-size));
+    }
+
+    /* NAVIGATION LINKS */
+    body:nth-child(2) nav div {
+    font-size: calc(2 * var(--font-size));
+    }
+
+    /* HEADER */
+    body header h1{
+        font-size: calc(6.5 * var(--font-size));
+        /* eller 7.5?? */
+    }
+
+    /* MAIN | HEADING 1 */
+    body main h1 { 
+        font-family: "Bungee Outline"; 
+        font-size: calc(3 * var(--font-size));
+        margin: 5px 0px;
+        line-height: 1.4;
+    }   
+
+    /* MAIN | HEADING 2 */
+    body main h2 { 
+        font-size: calc(2.5 * var(--font-size));
+    }
+
+    /* MAIN | ARTICLE | HEADING 2 | DESKTOP */
+    main article > div:nth-child(3) > div:first-child h2,
+    main article > div:nth-child(3) > div:last-child h2 {
+        font-size: calc(1.8 * var(--font-size));
+    }
+
+    /* MAIN | ARTICLE | SONGLIST */
+    main article > div:nth-child(3) > div:first-child ul,
+    main article > div:nth-child(3) > div:last-child ul {
+        font-size: calc(1.4 * var(--font-size));
+    }
+
+     /* MAIN | ARTICLE | ANECDOTES */
+    main article > ul:nth-child(4){
+        font-size: calc(1.6 * var(--font-size));
+    }
 
         /* Hugo:
-        
         Jag inspekterade i firefox när bredden var på 1111px och kollat vad storleken var då och lagt fast strl när den når över 1111px. EX. h1 {font-size: 44.4px;}
         */
-    }
 }
+
+
+/*---------- MEDIA QUERIES LAPTOP ----------*/
+/* LAPTOP */
+@media (min-width: 800px) and (max-width:900px){
+    
+    /* IMG-BACKGROUND */
+    body > div {
+    background-color: teal;
+    }
+
+/* --------------------------------------------------------------------------------- */
+/*  FONT | LAPTOP */
+/* --------------------------------------------------------------------------------- */   
+   
+    body {
+        font-size: 14px;
+    }
+
+    body header h1{
+        font-size: 58.5px;
+    }
+
+    body main h1 { 
+        font-size: 27px;
+    }   
+
+    body main h2 { 
+        font-size: 22.5px;
+    }
+
+    /* MAIN | ARTICLE | HEADING | ATTRIBUTE | LAPTOP */
+    main article > div:nth-child(3) > div:first-child h2,
+    main article > div:nth-child(3) > div:last-child h2 {
+        font-size: 16.3px;
+    }
+
+    /* MAIN | ARTICLE | LIST | ATTRIBUTE | LAPTOP */
+    main article > div:nth-child(3) > div:first-child ul,
+    main article > div:nth-child(3) > div:last-child ul {
+        font-size: 12.6px;
+    }
+
+}
+
+
+
+
 
 
 /*---------- MEDIA QUERIES TABLET ----------*/
