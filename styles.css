@@ -769,8 +769,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
   
     /*--- ÄNDRA ska var vw --------------- */
     body {
-        /* font-size: 14px; kolla upp*/
-        font-size: calc(1.7 * var(--font-size));
+        font-size: calc(2.6 * var(--font-size));
     }
 
     body header h1 {
@@ -784,22 +783,22 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     body main h2 { 
         font-size: calc(3.9 * var(--font-size));
     }
-/*--- ÄNDRA ska var vw --------------- */
+
     /* MAIN | ARTICLE - ALL | SONGLIST | HEADING | TABLET */
     main article > div:nth-child(3) > div:first-child h2,
     main article > div:nth-child(3) > div:last-child h2 {
-        font-size: 16.3px; /* calc(16.3 * var(--font-size)); */
+        font-size: calc(4 * var(--font-size));
     }
-/*--- ÄNDRA ska var vw --------------- */
+
     /* MAIN | ARTICLE - ALL | SONGLIST | LIST | TABLET */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
-        font-size: 12.6px; /* calc(12.6 * var(--font-size)); */
+        font-size: calc(2 * var(--font-size));
     }
-/*--- ÄNDRA ska var vw --------------- */
+
     /* MAIN | ARTICLE - ALL | ANECDOTES | TABLET */
     main article > ul:nth-child(4) {
-        font-size: 14px; /* calc(14 * var(--font-size)); */
+        font-size: calc(2.6 * var(--font-size));
     }
 
 
@@ -847,6 +846,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     /* ALBUM NAME */
     main article > div:first-child > div:first-child > h1 {
         line-height: 1.4;
+        margin: 5px 0 0 0;
     }
 
 
@@ -888,6 +888,12 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         margin: 0px 0px 0px 8px;
     }
 
+    /* MAIN | ARTICLE - ALL | SONGLIST | LIST */
+    main article > div:nth-child(3) > div:first-child ul,
+    main article > div:nth-child(3) > div:last-child ul {
+        /* padding: 0px 0px 18px 22px; */
+    }
+   
     /* SONGLIST | ARTICLE - ALL | SIDE ONE */
     main article > div:nth-child(3) > div:first-child {
         border-bottom-left-radius: 0px;
