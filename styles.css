@@ -42,24 +42,25 @@ body main h1 {
 }
 
 body main h2 { 
-    font-family: "Barlow Semi Condensed"; 
+    font-family: "Barlow Semi Condensed";
     line-height: 1.4;
     font-size: 28px;
 }
 
-/* MAIN | ARTICLE - ALL | SONGLIST | HEADING */
+/* SONGLIST | HEADING */
 main article > div:nth-child(3) > div:first-child h2,
 main article > div:nth-child(3) > div:last-child h2 {
     font-size: 22px;
+    font-family: "Barlow Condensed";
 }
 
-/* MAIN | ARTICLE - ALL | SONGLIST | LIST */
+/* SONGLIST | LIST */
 main article > div:nth-child(3) > div:first-child ul,
 main article > div:nth-child(3) > div:last-child ul {
     font-size: 16px;
 }
 
-/* MAIN | ARTICLE - ALL | ANECDOTES */
+/* ANECDOTES */
 main article > ul:nth-child(4) {    
     font-size: 18.5px;
 }
@@ -74,14 +75,14 @@ body > div {
     padding: 100px 40px;
     
     /* IMAGE */
-    background-image: url("images/img-desktop/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
+    background-image: url("images/img-desktop/deva_cover_large_1280x1054.jpg");
     background-size: 100vw 75vw;
     background-position: top right;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-/* CONTENT-WRAPPER - BLACK TRANSPARENT BACKGROUND*/
+/* CONTENT-WRAPPER - WITH TRANSPARENT BACKGROUND*/
 body > div > div {
     padding: var(--paddingLarge);
     background-color: rgba(64, 64, 64, 0.5);
@@ -314,51 +315,50 @@ main article > div:nth-child(3) {
     justify-content: start;
 }
 
-/* SONGLIST | ARTICLE - ALL | SIDE ONE */
+
+/* SONGLIST | SIDE ONE | ALL ARTICLES */
 main article > div:nth-child(3) > div:first-child {
     height: 100%;
     border-bottom-left-radius: var(--borderRadius);
 }
 
-/* SONGLIST | FIRST ARTICLE | SIDE ONE */
+/* SONGLIST | SIDE ONE | FIRST ARTICLE */
 main article:first-child > div:nth-child(3) > div:first-child {
     color: #c29546;
     background-color: #5d030f;       
 }
 
-/* SONGLIST | SECOND ARTICLE | SIDE ONE */
+/* SONGLIST | SIDE ONE | SECOND ARTICLE */
 main article:nth-child(2) > div:nth-child(3) > div:first-child {
     color: #bf861c;
     background-color: #9b301c;
 }
 
-/* SONGLIST | ARTICLE - ALL | SIDE TWO */
+/* SONGLIST | SIDE TWO | ALL ARTICLES */
 main article > div:nth-child(3) > div:last-child {
     height: 100%;
     border-bottom-right-radius: var(--borderRadius);
-    /* obs! behövs denna?? grid-area: 1 / 2 / 2 / 3; */
 }
 
-/* SONGLIST | FIRST ARTICLE | SIDE TWO */
+/* SONGLIST | SIDE TWO | FIRST ARTICLE */
 main article:first-child > div:nth-child(3) > div:last-child {
     color: #c29546;
     background-color: #5d030f;
 }
 
-/* SONGLIST | SECOND ARTICLE | SIDE TWO */
+/* SONGLIST | SIDE TWO | SECOND ARTICLE */
    main article:nth-child(2) > div:nth-child(3) > div:last-child {
     color: #bf861c;
     background-color: #9b301c;
 }
 
-/* SONGLIST | ARTICLE - ALL | HEADING */
+/* SONGLIST | HEADING */
 main article > div:nth-child(3) > div:first-child h2,
 main article > div:nth-child(3) > div:last-child h2 {
-    font-family: "Barlow Condensed";
     margin: 15px 25px 0px 15px;
 }
 
-/* SONGLIST | ARTICLE - ALL | LIST */
+/* SONGLIST | LIST */
 main article > div:nth-child(3) > div:first-child ul,
 main article > div:nth-child(3) > div:last-child ul {
     list-style: decimal;
@@ -371,7 +371,7 @@ main article > div:nth-child(3) > div:last-child ul {
 /*  ANECDOTES | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
-/* MAIN | ARTICLE - ALL | ANECDOTES | GRID CONTAINER */
+/* ANECDOTES | GRID CONTAINER */
 main article > ul:nth-child(4) {
     grid-column: 1 / span 2;
     grid-row: 3 / span 1;
@@ -428,7 +428,7 @@ main article:nth-child(1) > ul:nth-child(4) > li:nth-child(3) {
 /* NUMBER SIX */
 main article:nth-child(1) > ul:nth-child(4) > li:nth-child(6) {
     color: #ffffff;
-    background-image: url("images/img-desktop/album_01/Deva-Premal-Tibetan-Mantras-for-Turbulent-Times.jpg");
+    background-image: url("images/img-desktop/album_01/anecdotes_01.jpg");
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -479,8 +479,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(2) {
 /* NUMBER FIVE */
 main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5) {
     color: #ffffff;
-    /* TEXTEN ska vara låtnamnet ovan för deras namn i  bilden */
-    background-image: url("images/img-desktop/album_02/A-deva_cover_large_500x500Kvalitet-70.jpg");
+    background-image: url("images/img-desktop/album_02/anecdotes_02.jpg");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -522,12 +521,8 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 
 
 @media (min-width: 900px) and (max-width: 1111px){
-    
-    /* BACKGROUND-IMAGE | DESKTOP */
-    body > div {
-        background-image: url("images/img-desktop/A-deva_cover_large_1280x1054-beskuren.kvalitet-70.jpg");
-        }
 
+    /* IMG-BACKGROUND - INHERIT*/
 
 /* --------------------------------------------------------------------------------- */
 /*  FONT | DESKTOP 900-1111px */
@@ -556,19 +551,19 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         font-size: calc(2.5 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | SONGLIST | HEADING 2 */
+    /* SONGLIST | HEADING 2 */
     main article > div:nth-child(3) > div:first-child h2,
     main article > div:nth-child(3) > div:last-child h2 {
         font-size: calc(1.8 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | SONGLIST | LIST */
+    /* SONGLIST | LIST */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
         font-size: calc(1.4 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE-ALL | ANECDOTES */
+    /* ANECDOTES */
     main article > ul:nth-child(4){
         font-size: calc(1.6 * var(--font-size));
     }
@@ -624,20 +619,19 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         font-size: 22.5px;
     }
 
-
-    /* MAIN | ARTICLE - ALL | ALBUM_DATA | HEADING */
+    /* ALBUM_DATA | HEADING */
     main article > div:nth-child(3) > div:first-child h2,
     main article > div:nth-child(3) > div:last-child h2 {
         font-size: 16.3px;
     }
 
-    /* MAIN | ARTICLE - ALL | SONGLIST | LIST */
+    /* SONGLIST | LIST */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
         font-size: 12.6px;
     }
 
-    /* MAIN | ARTICLE - ALL | ANECDOTES */
+    /* ANECDOTES */
     main article > ul:nth-child(4) {
         font-size: 14px;
     }
@@ -671,7 +665,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     
     /* BACKGROUND-IMAGE | TABLET */
     body > div {
-        background-image: url("images/img-tablet/A-deva_cover_tablet_800x800.jpg");
+        background-image: url("images/img-tablet/deva_cover_tablet_800x800.jpg");
         background-size: cover;
         background-position: top center;
     }
@@ -701,19 +695,19 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         font-size: calc(3.9 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | SONGLIST | HEADING */
+    /* SONGLIST | HEADING */
     main article > div:nth-child(3) > div:first-child h2,
     main article > div:nth-child(3) > div:last-child h2 {
         font-size: calc(4 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | SONGLIST | LIST */
+    /* SONGLIST | LIST */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
         font-size: calc(2 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | ANECDOTES */
+    /* ANECDOTES */
     main article > ul:nth-child(4) {
         font-size: calc(2.6 * var(--font-size));
     } 
@@ -735,6 +729,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /* --------------------------------------------------------------------------------- */
 /*  NAVIGATION | TABLET 500-800px */
 /* --------------------------------------------------------------------------------- */   
+    
     /* NAVIGATION BAR*/
     body:nth-child(2) nav { 
         margin: 70px 0px;
@@ -751,7 +746,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /*  ARTICLE - ALL | TABLET 500-800px */
 /* --------------------------------------------------------------------------------- */   
 
-      /* ALBUM DATA */
+    /* ALBUM DATA */
     main article > div:first-child {
         grid-column: 1 / span 2;
         grid-row: 2 / span 1;
@@ -833,23 +828,21 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         margin: 0px 0px 0px 8px;
     }
 
-    /*  SONGLIST | ARTICLE - ALL | LIST */
+    /*  SONGLIST | LIST */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
         padding: 0px 0px 18px 28px;
     }
    
-    /* SONGLIST | ARTICLE - ALL | SIDE ONE */
+    /* SONGLIST | SIDE ONE */
     main article > div:nth-child(3) > div:first-child {
         border-bottom-left-radius: 0px;
         border-top-right-radius: var(--borderRadius);
-        /* OBS! grid-area borde inte behövas */grid-area: 1 / 1 / 2 / 2;
     }
 
-    /* SONGLIST | ARTICLE - ALL | SIDE TWO */
+    /* SONGLIST | SIDE TWO */
     main article > div:nth-child(3) > div:last-child {
         border-bottom-right-radius: var(--borderRadius);
-        /* obs! grid-area borde inte behövas */grid-area: 2 / 1 / 3 / 2;
     }
 
 
@@ -857,7 +850,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /*  ANECDOTES | TABLET 500-800px */
 /* --------------------------------------------------------------------------------- */   
 
-    /* ANECDOTES | ARTICLE - ALL | GRID CONTAINER */
+    /* ANECDOTES | GRID CONTAINER */
     main article > ul:nth-child(4) {
         grid-template-columns: repeat(4, minmax(min-content, 1fr));
         grid-template-rows: repeat(2, minmax(min-content, 1fr));
@@ -962,8 +955,8 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 
     body header h1 {
         font-size: calc(15 * var(--font-size));
-        height: 100%;
         color: rgba(255, 255, 255, 0.8);
+        height: 100%;
     }
 
     body:nth-child(2) nav div {
@@ -978,19 +971,19 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         font-size: calc(5.3 * var(--font-size));
     }
 
-    /*  SONGLIST | ARTICLE - ALL | HEADING */
+    /*  SONGLIST | HEADING */
     main article > div:nth-child(3) > div:first-child h2,
     main article > div:nth-child(3) > div:last-child h2 {
         font-size: calc(5.3 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | SONGLIST | LIST */
+    /* SONGLIST | LIST */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
         font-size: calc(3.8 * var(--font-size));
     }
 
-    /* MAIN | ARTICLE - ALL | ANECDOTES */
+    /* ANECDOTES */
     main article > ul:nth-child(4) {
         font-size: calc(3.5 * var(--font-size));
     }
@@ -1050,7 +1043,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /*  ARTICLE - ALL | MOBILE 0-500px */
 /* --------------------------------------------------------------------------------- */   
 
-    /*  ALBUM */
+    /* ALBUM */
     main article {
         grid-template-columns: 1fr;
         grid-template-rows: minmax(max-content, 1fr) repeat(3, minmax(min-content, max-content));
@@ -1115,7 +1108,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         grid-column: 1;
         grid-row: 2;
 
-    /* SONGLIST | GRID CONTAINER */
+        /* SONGLIST | GRID CONTAINER */
         grid-template-columns: repeat(2, minmax(min-content, 1fr));  
     }
 
@@ -1124,19 +1117,18 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /*  ANECDOTES | MOBILE 0-500px */
 /* --------------------------------------------------------------------------------- */   
 
-/* MAIN | ARTICLE - ALL | ANECDOTES | GRID CONTAINER */
-main article > ul:nth-child(4) {
-    grid-column: 1;
-    grid-row: 4;
+/* ANECDOTES | GRID CONTAINER */
+    main article > ul:nth-child(4) {
+        grid-column: 1;
+        grid-row: 4;
 
-    row-gap: 4px;
-    /* TO ASSURE A SURTEN HIGHT */
-    height: 100%;
-    
-    display: grid;
-    grid-template-columns: repeat(3, minmax(min-content, 1fr));
-    grid-template-rows: repeat(2, minmax(min-content, 1fr));
-}
+        row-gap: 4px;
+        height: 100%;
+        
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, 1fr));
+        grid-template-rows: repeat(2, minmax(min-content, 1fr));
+    }
 
 /* --------------------------------------------------------------------------------- */
 /*  ANECDOTES | FIRST ARTICLE | MOBILE 0-500px */
@@ -1147,7 +1139,7 @@ main article > ul:nth-child(4) {
         grid-area: 1 / 1 / 2 / 2;
     }
 
-    /* NUMBER TWO - empty LARGE SCREENS */
+    /* NUMBER TWO - empty */
     main article:nth-child(1) > ul:nth-child(4) > li:nth-child(2) {
         display: none;
     } 
@@ -1162,7 +1154,7 @@ main article > ul:nth-child(4) {
         display: none;
     }
 
-    /* NUMBER FIVE empty - phone*/
+    /* NUMBER FIVE empty - phone */
     main article:nth-child(1) > ul:nth-child(4) > li:nth-child(5) {
         grid-area: 2 / 1 / 3 / 2;
     }
@@ -1186,8 +1178,6 @@ main article > ul:nth-child(4) {
     /* NUMBER FIVE */
     main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5) {
         color: #ffffff;
-        /* TEXTEN ska vara låtnamnet ovanför deras namn i  bilden */
-        background-image: url("images/img-desktop/album_02/A-deva_cover_large_500x500Kvalitet-70.jpg");
         grid-area: 2 / 1 / 3 / 3;
     }
 
