@@ -65,6 +65,11 @@ main article > ul:nth-child(4) {
     font-size: 18.5px;
 }
 
+/* ITALIC */
+I {
+    list-style-type: lower-greek;
+}
+
 
 /* --------------------------------------------------------------------------------- */
 /*  WRAPPER | LARGE SCREENS */
@@ -187,7 +192,7 @@ main article {
 /* ALBUM DATA */
 main article > div:first-child {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    grid-row: 1 / span 2;
     margin-right: 1.2vw;
     height: max-content;
 }
