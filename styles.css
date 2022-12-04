@@ -65,11 +65,6 @@ main article > ul:nth-child(4) {
     font-size: 18.5px;
 }
 
-/* ITALIC */
-I {
-    list-style-type: lower-greek;
-}
-
 
 /* --------------------------------------------------------------------------------- */
 /*  WRAPPER | LARGE SCREENS */
@@ -173,7 +168,7 @@ main > article {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ARTICLE - ALL | LARGE SCREENS */
+/*  ALBUM | ARTICLE - ALL | LARGE SCREENS */
 /* --------------------------------------------------------------------------------- */   
 
 /* ALBUM */
@@ -224,6 +219,7 @@ main article:nth-child(2) > div:first-child > div:first-child > h1::after {
     height: 38px;
     content: "";
     position: absolute;
+    z-index: 2;
 
     right: 97%;
     bottom: 64%; 
@@ -252,6 +248,28 @@ main article > div:first-child > div:nth-child(2) li {
 main article > div:first-child > div:nth-child(3) p {
     color: #ffffff;
     margin-top: 9vh;
+}
+
+/* <----- ALBUM | FIRST ARTICLE -----> */
+/* LIST STYLE TYPE PARAGRAPH*/
+main article:first-child > div:first-child > div:nth-child(3) ul {
+    font-style: italic;
+    list-style-type: lower-greek; 
+}
+ 
+main article:first-child > div:first-child > div:nth-child(3) > ul:nth-child(2) > li:nth-child(2) > a {
+    color: #c29546;
+    font-weight: bold;
+}
+
+/* <----- ALBUM | SECOND ARTICLE -----> */
+main article:nth-child(2) > div:first-child > div:nth-child(3) > p > a {
+    color: #bf861c;
+    font-weight: bold;
+}
+
+main article:nth-child(2) > div:first-child > div:nth-child(3) > p > a:nth-child(2) {
+    font-style: italic;
 }
 
 
@@ -386,8 +404,7 @@ main article > ul:nth-child(4) {
     padding-left: 0px;
     margin: 0px;
     column-gap: 4px;
-    /* TO ASSURE A SURTEN HIGHT */
-    height: 20vw;
+    height: min-content;
     
     display: grid;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
@@ -419,6 +436,12 @@ main article:nth-child(1) > ul:nth-child(4) > li:nth-child(1) {
     grid-area: 1 / 1 / 2 / 2;
 }
 
+/* NUMBER ONE | MANTRA TRANSLATION */
+main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1) > i {
+    padding: 0px 12px;
+    text-align: justify;
+}
+
 /* NUMBER TWO - empty LARGE SCREENS*/
 main article:nth-child(1) > ul:nth-child(4) > li:nth-child(2) {
     grid-area: 1 / 2 / 2 / 3;
@@ -429,7 +452,6 @@ main article:nth-child(1) > ul:nth-child(4) > li:nth-child(3) {
     border-bottom-left-radius: 0px;
     grid-area: 1 / 3 / 2 / 5;
 }
-
 
 /* NUMBER SIX */
 main article:nth-child(1) > ul:nth-child(4) > li:nth-child(6) {
@@ -473,6 +495,7 @@ main article:nth-child(1) > ul:nth-child(4) > li:nth-child(7) {
 /* NUMBER ONE */
 main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1) {
     border-bottom-left-radius: 0px;
+    justify-content: center;
     grid-area: 1 / 1 / 2 / 3;
 }
 
@@ -640,7 +663,14 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     /* ANECDOTES */
     main article > ul:nth-child(4) {
         font-size: 14px;
+
+        /* inherit height: 20vw; */
+        height: min-content;  
     }
+    main article:nth-child(1) > ul:nth-child(4) > li:nth-child(6) {
+        /* inherit background-size: 100% 100%; */
+        background-size: cover;
+     }
 
 }
 /* --------------------------------------------------------------------------------- */
@@ -749,7 +779,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ARTICLE - ALL | TABLET 500-800px */
+/*  ALBUM | ARTICLE - ALL | TABLET 500-800px */
 /* --------------------------------------------------------------------------------- */   
 
     /* ALBUM DATA */
@@ -809,6 +839,12 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         border-bottom-left-radius: var(--borderRadius);
     }
 
+    main article:first-child > div:nth-child(2) > img {
+        object-fit: contain;
+        object-position: top;
+        background-color: #5d030f;
+    }  
+
     /* ALBUM FRONTCOVER - HOVER */
     main article > div:nth-child(2) > img:first-of-type:hover {
         pointer-events: none;
@@ -836,12 +872,18 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
         margin: 0px 0px 0px 8px;
     }
 
-    /*  SONGLIST | LIST */
+    /* SONGLIST | HEADING */
+    main article > div:nth-child(3) > div:first-child h2, 
+    main article > div:nth-child(3) > div:last-child h2 {
+        margin: 12px 25px 0px 15px;
+    }
+
+    /* SONGLIST | LIST */
     main article > div:nth-child(3) > div:first-child ul,
     main article > div:nth-child(3) > div:last-child ul {
-        padding: 0px 0px 18px 28px;
+        padding: 0px 0px 18px 25px;
     }
-   
+
     /* SONGLIST | SIDE ONE */
     main article > div:nth-child(3) > div:first-child {
         border-bottom-left-radius: 0px;
@@ -884,6 +926,8 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     /* NUMBER SIX */
     main article:nth-child(1) > ul:nth-child(4) > li:nth-child(6) {
         grid-area: 2 / 2 / 3 / 3;
+        /* inherit background-size: 100% 100%; */
+        background-size: cover;
     }
 
     /* NUMBER SEVEN */
@@ -896,6 +940,16 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /* --------------------------------------------------------------------------------- */
 /*  ANECDOTES | SECOND ARTICLE | TABLET 500-800px */
 /* --------------------------------------------------------------------------------- */   
+
+    /* NUMVER ONE */
+    main article:nth-child(2) > ul:nth-child(4) > li:first-child {
+        flex-direction: column;
+        row-gap: 4px;
+    }
+
+    main article:nth-child(2) > ul:nth-child(4) > li:first-child:not(li:last-child) {
+        text-align: center;
+    }
 
     /* NUMBER THREE - empty tablet */
     main article:nth-child(2) > ul:nth-child(4) > li:nth-child(3) {
@@ -1088,7 +1142,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 
 
 /* --------------------------------------------------------------------------------- */
-/*  ARTICLE - ALL | MOBILE 0-500px */
+/*  ALBUM | ARTICLE - ALL | MOBILE 0-500px */
 /* --------------------------------------------------------------------------------- */   
 
     /* ALBUM */
@@ -1212,6 +1266,7 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
     main article:nth-child(1) > ul:nth-child(4) > li:nth-child(6) {
         grid-area: 2 / 2 / 3 / 3;
         overflow: hidden;
+        background-size: cover;
     }
 
     /* NUMBER SEVEN */
@@ -1223,6 +1278,18 @@ main article:nth-child(2) > ul:nth-child(4) > li:nth-child(6) {
 /* --------------------------------------------------------------------------------- */
 /*  ANECDOTES | SECOND ARTICLE | MOBILE 0-500px */
 /* --------------------------------------------------------------------------------- */   
+
+    /* NUMVER ONE */
+    main article:nth-child(2) > ul:nth-child(4) > li:first-child {
+        flex-direction: column;
+        row-gap: 4px;
+        text-align: center;
+    }
+
+    /* NUMBER ONE | MANTRA TRANSLATION */
+    main article:nth-child(2) > ul:nth-child(4) > li:nth-child(1) > i {
+    padding: 0px;
+    }
 
     /* NUMBER FIVE */
     main article:nth-child(2) > ul:nth-child(4) > li:nth-child(5) {
